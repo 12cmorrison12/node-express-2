@@ -1,0 +1,22 @@
+{
+  "name": "bankly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "seed": "dropdb bankly_carver && createdb bankly_carver && psql -U postgres bankly_carver < data.sql && dropdb bankly_test_carver && createdb bankly_test_carver && psql -U postgres bankly_test_carver < data.sql",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4",
+    "jest": "^29.7.0",
+    "jsonwebtoken": "^8.3.0",
+    "pg": "^8.11.3",
+    "supertest": "^3.3.0"
+  }
+}
